@@ -35,4 +35,3 @@ chmod 600 $SSH_DIR/config
 mkdir -p "$BUILD_DIR/.profile.d"
 echo "unset -v SSH_KEY" > $BUILD_DIR/.profile.d/unset-ssh-key.sh
 echo "Success copying SSH key!"
-ssh -T git@github.com
