@@ -33,5 +33,6 @@ echo 'StrictHostKeyChecking=no' > $SSH_DIR/config
 chmod 600 $SSH_DIR/config
 
 mkdir -p "$BUILD_DIR/.profile.d"
-echo "unset -v SSH_KEY && export GIT_COMMAND=\"ssh -vvv\"" > $BUILD_DIR/.profile.d/unset-ssh-key.sh
+echo "unset -v SSH_KEY" > $BUILD_DIR/.profile.d/unset-ssh-key.sh
 echo "Success copying SSH key!"
+ssh -T git@github.com
